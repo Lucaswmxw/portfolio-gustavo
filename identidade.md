@@ -51,9 +51,9 @@ Cada projeto possui um enquadramento visual próprio e reflete com absoluta hone
 
 | Projeto | Estado Real | Descrição & Escopo |
 | :--- | :--- | :--- |
-| **01 / ALLIN** | **Projeto completo do curso técnico** | Empresa fictícia versátil de prestação de serviços desenvolvida integralmente no curso técnico da Escola Raphael Di Santo. O projeto contempla planejamento conceitual, definição do modelo de serviços integrados, proposta de valor e identidade estruturada para atender demandas variadas com flexibilidade e qualidade. |
-| **02 / TECNOBOUND** | **Jogo completo** | Jogo de estética retrô com temática de ficção científica ambientado no espaço. Incorpora mecânicas completas de roguelike com exploração de estações espaciais, combate contra robôs e criaturas alienígenas, variedade de encontros e progressão dinâmica durante cada partida. |
-| **03 / MERCILESS** | **Projeto pessoal em planejamento** | Jogo de terror assimétrico idealizado e planejado com dedicação ao longo de aproximadamente dois anos. Prevê 8 sobreviventes e 1 killer com mecânicas assimétricas diferenciadas. Conta com designs e ilustrações originais desenhados à mão e colaboração próxima com amigos da comunidade online. *(Apresentado expressamente como projeto em fase de planejamento conceitual e design mecânico).* |
+| **01 / ALLIN** | **Projeto completo do curso técnico** | Projeto concluído do curso técnico: uma empresa fictícia de prestação de serviços versátil. |
+| **02 / TECNOBOUND** | **Jogo completo** | Jogo roguelike de ficção científica com estética retrô, concluído como projeto autoral. |
+| **03 / MERCILESS** | **Projeto pessoal em planejamento** | Jogo de terror assimétrico idealizado e planejado com dedicação ao longo de aproximadamente dois anos. Prevê 8 sobreviventes e 1 killer com mecânicas assimétricas diferenciadas. Prevê designs originais desenhados à mão e conta com colaboração e troca de ideias com amigos da internet. *(Apresentado expressamente como projeto em fase de planejamento conceitual e design mecânico).* |
 
 ---
 

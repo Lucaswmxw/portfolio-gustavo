@@ -8,7 +8,7 @@ Este documento registra os sites reais pesquisados no Awwwards e SiteInspire, an
 
 - **Nome oficial:** Emotion Agency
 - **URL:** [https://emotion-agency.com/](https://emotion-agency.com/)
-- **Reconhecimento:** Awwwards Site of the Day (SOTD), CSS Design Awards.
+- **Observação:** confirmar a página de reconhecimento diretamente no Awwwards antes de afirmar premiações específicas.
 - **Características visuais observadas:**
   - Navegação fluida e contínua, com resposta imediata aos movimentos do cursor e cliques.
   - Menu de navegação limpo, com transições refinadas de opacidade e posicionamento.
@@ -34,7 +34,7 @@ Este documento registra os sites reais pesquisados no Awwwards e SiteInspire, an
 
 - **Nome oficial:** Signal-A Studio
 - **URL:** [https://signal-a.studio/](https://signal-a.studio/)
-- **Reconhecimento:** Awwwards Site of the Day (SOTD, Outubro de 2026).
+- **Observação:** manter informações sobre premiações somente após conferência na página oficial do Awwwards.
 - **Características visuais observadas:**
   - Estética minimalista rigorosa em paleta de alto contraste preto e branco (`#000000` e `#FFFFFF`).
   - Escala tipográfica impactante com títulos de grande proporção e metadados ultralegíveis em caixas e tags estruturadas.
@@ -60,7 +60,7 @@ Este documento registra os sites reais pesquisados no Awwwards e SiteInspire, an
 
 - **Nome oficial:** FORMAT (Obys Agency em colaboração com DES)
 - **URL:** [https://format.obys.agency/](https://format.obys.agency/)
-- **Reconhecimento:** Awwwards Site of the Day (SOTD), Developer Award.
+- **Observação:** confirmar eventuais premiações na página oficial antes de incluí-las na versão final.
 - **Características visuais observadas:**
   - Exploração conceitual de formas geométricas, proporções de tela e recipientes editoriais.
   - Títulos monumentais combinados com blocos geométricos puros, grades e enquadramentos contrastantes.
