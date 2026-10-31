@@ -2109,3 +2109,172 @@ html.js-enabled .skill-card.reveal:nth-child(7) { transition-delay: 0.36s; }
     transition: none !important;
   }
 }
+
+/* Mídias originais fornecidas pelo autor */
+.profile-photo-wrap {
+  width: 100%;
+  max-width: 360px;
+  margin: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  overflow: hidden;
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: calc(var(--radius-md) - 4px);
+}
+
+.profile-photo-caption,
+.project-logo-caption {
+  margin-top: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.project-logo-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.project-logo-frame {
+  margin: 0;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: radial-gradient(ellipse at center, rgba(0, 196, 255, 0.09), transparent 68%), var(--bg-surface);
+  overflow: hidden;
+}
+
+.project-logo-tecnobound {
+  border-color: rgba(0, 196, 255, 0.3);
+}
+
+.project-logo-image {
+  display: block;
+  width: min(100%, 390px);
+  max-height: 420px;
+  height: auto;
+  object-fit: contain;
+}
+
+.project-visual-fallback {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .profile-photo-wrap {
+    max-width: 300px;
+  }
+
+  .project-logo-frame {
+    min-height: 240px;
+  }
+
+  .project-logo-image {
+    max-height: 320px;
+  }
+}
+
+
+/* Logos oficiais dos projetos fornecidas pelo autor */
+.project-logo-allin {
+  border-color: rgba(255, 190, 0, 0.38);
+  background: radial-gradient(ellipse at center, rgba(255, 190, 0, 0.08), transparent 70%), var(--bg-surface);
+}
+
+.project-logo-merciless {
+  border-color: rgba(255, 45, 45, 0.38);
+  background: radial-gradient(ellipse at center, rgba(160, 0, 0, 0.13), transparent 72%), #090909;
+}
+
+.project-logo-image-allin {
+  width: min(100%, 390px);
+  border-radius: 12px;
+}
+
+.project-logo-image-merciless {
+  width: min(100%, 520px);
+  max-height: 420px;
+}
+
+.project-logo-merciless .project-logo-caption {
+  color: #d7d7d7;
+}
+
+
+/* --------------------------------------------------------------------------
+   IDENTIDADE CROMÁTICA REATIVA POR PROJETO
+   As cores acompanham o cartão de projeto mais visível durante a navegação.
+   -------------------------------------------------------------------------- */
+html[data-project-theme="tecnobound"] {
+  --bg-primary: #050912;
+  --bg-surface: #0a1222;
+  --bg-elevated: #101d31;
+  --border-subtle: #20334b;
+  --border-strong: #365777;
+  --border-focus: #00d9ff;
+  --text-primary: #f2f8ff;
+  --text-secondary: #a8bbd1;
+  --text-muted: #7188a3;
+  --accent-primary: #00d9ff;
+  --accent-hover: #00bde8;
+  --accent-glow: rgba(0, 217, 255, 0.18);
+  --accent-contrast: #02070d;
+  --accent-secondary: #ff3ca6;
+}
+
+html[data-project-theme="allin"] {
+  --bg-primary: #0a0904;
+  --bg-surface: #17140a;
+  --bg-elevated: #26200c;
+  --border-subtle: #493b10;
+  --border-strong: #80691b;
+  --border-focus: #ffc400;
+  --text-primary: #fffdf4;
+  --text-secondary: #e4d9ad;
+  --text-muted: #b5a66f;
+  --accent-primary: #ffc400;
+  --accent-hover: #e5ad00;
+  --accent-glow: rgba(255, 196, 0, 0.18);
+  --accent-contrast: #100d02;
+  --accent-secondary: #ffffff;
+}
+
+html[data-project-theme="merciless"] {
+  --bg-primary: #090404;
+  --bg-surface: #160909;
+  --bg-elevated: #260d0d;
+  --border-subtle: #4b1717;
+  --border-strong: #792525;
+  --border-focus: #ff2525;
+  --text-primary: #fff5f5;
+  --text-secondary: #d5aaaa;
+  --text-muted: #a77c7c;
+  --accent-primary: #ff2525;
+  --accent-hover: #d91d1d;
+  --accent-glow: rgba(255, 37, 37, 0.2);
+  --accent-contrast: #100202;
+  --accent-secondary: #f3f3f3;
+}
+
+html[data-project-theme] body,
+html[data-project-theme] .project-entry,
+html[data-project-theme] .site-header {
+  transition: background-color var(--transition-slow), color var(--transition-base), border-color var(--transition-base);
+}

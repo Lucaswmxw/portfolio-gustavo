@@ -119,3 +119,10 @@ Para atender à proibição expressa de imagens de IA:
      - **Allin:** Grade arquitetônica de serviços com proporções de módulos limpos e linhas de alinhamento.
      - **TecnoBound:** Composição geométrica com estética pixel/vector sci-fi, usando bordas angulares, retículas e estética retrô geradas com CSS puro.
      - **Merciless:** Composição de alto contraste sombrio, linhas assimétricas de tensão, proporções dramáticas e espaço demarcado para as ilustrações manuais originais do projeto.
+
+
+## Paletas reativas dos projetos
+
+- **TecnoBound:** ciano/azul, preto e rosa, alinhados à logo do jogo.
+- **Allin:** amarelo, preto e branco, alinhados à logo da equipe. O projeto foi realizado em equipe por Lucas Ferreira, Yago Delbone, Nathan Liberato e Enrico Bonato.
+- **Merciless:** preto e vermelho, alinhados à identidade visual de terror.

@@ -39,6 +39,7 @@ Este documento rastreia todas as funcionalidades previstas para o portfólio de 
 - **2026-10-30 (Etapa 5):** Implementação da Seção Contato (07) com formulário semântico, validação nativa de campos em JS puro, mensagens acessíveis e rodapé institucional.
 - **2026-10-30 (Etapa 6):** Implementação das Funcionalidades Avançadas (06): sistema de revelação gradual via IntersectionObserver resiliente (No-JS safe), barra de progresso editorial e microinterações de menu e tema.
 - **2026-10-30 (Etapa 7):** Revisão visual e harmonia de design baseada nas 4 referências (Emotion Agency, Signal-A Studio, Format por Obys e Studio Freight). Ajuste do token de contraste dinâmico de botões (`--accent-contrast`), animação sutil nos indicadores de status/telemetria (`pulseDot`), verificação estática inicial de tags, âncoras e arquivos; testes visuais manuais ainda pendentes.
+- **2026-10-31 (auditoria técnica):** Repetida a análise estática de HTML, CSS, JavaScript, âncoras internas, rótulos dos campos, textos alternativos e arquivos de imagem. Corrigido o acesso ao `localStorage` para que restrições de privacidade não interrompam o script e adicionada compatibilidade com navegadores que usam `MediaQueryList.addListener`. Ver relatório `AUDITORIA_TECNICA.md`.
 
 
 ## Pendências antes da entrega
@@ -47,3 +48,12 @@ Este documento rastreia todas as funcionalidades previstas para o portfólio de 
 - Confirmar os links de contato e GitHub com endereços reais antes de adicioná-los.
 - Criar o PDF final de referências visuais com capturas reais dos sites; os blocos gráficos do rascunho não substituem screenshots.
 - Criar o repositório e publicar o site; os arquivos locais não significam que a publicação já existe.
+
+
+## Tema cromático reativo por projeto
+
+- TecnoBound: azul/ciano, preto e rosa.
+- Allin: amarelo, preto e branco.
+- Merciless: preto e vermelho.
+- O tema muda conforme o cartão de projeto com maior presença visível na tela. A alternância claro/escuro continua disponível fora da área de projetos.
+- Pendente: conferir manualmente a transição e o contraste em navegadores e telas de diferentes tamanhos.

@@ -18,13 +18,34 @@
   const themeToggleBtn = document.getElementById('theme-toggle');
 
   /**
+   * Acessa o armazenamento com segurança: alguns navegadores/modos privados
+   * podem bloquear localStorage. Nessa situação, o site continua funcionando
+   * usando o tema da sessão, sem interromper a execução do restante do script.
+   */
+  function getSavedTheme() {
+    try {
+      const savedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
+      return savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function saveTheme(theme) {
+    try {
+      window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+    } catch (error) {
+      // O tema ainda é aplicado visualmente mesmo se o armazenamento estiver bloqueado.
+    }
+  }
+
+  /**
    * Obtém o tema preferido inicial (Armazenamento local ou Sistema Operacional)
    */
   function getPreferredTheme() {
-    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
-    if (savedTheme) {
-      return savedTheme;
-    }
+    const savedTheme = getSavedTheme();
+    if (savedTheme) return savedTheme;
+
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches
       ? 'light'
       : 'dark';
@@ -35,7 +56,7 @@
    */
   function applyTheme(theme) {
     htmlElement.setAttribute('data-theme', theme);
-    localStorage.setItem(THEME_STORAGE_KEY, theme);
+    saveTheme(theme);
 
     if (themeToggleBtn) {
       const isDark = theme === 'dark';
@@ -64,11 +85,19 @@
 
   // Escuta alterações na preferência do sistema operacional
   if (window.matchMedia) {
-    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function (e) {
-      if (!localStorage.getItem(THEME_STORAGE_KEY)) {
-        applyTheme(e.matches ? 'light' : 'dark');
+    const colorSchemeQuery = window.matchMedia('(prefers-color-scheme: light)');
+    const handleSystemThemeChange = function (event) {
+      if (!getSavedTheme()) {
+        applyTheme(event.matches ? 'light' : 'dark');
       }
-    });
+    };
+
+    // Compatibilidade com navegadores antigos que usam addListener.
+    if (typeof colorSchemeQuery.addEventListener === 'function') {
+      colorSchemeQuery.addEventListener('change', handleSystemThemeChange);
+    } else if (typeof colorSchemeQuery.addListener === 'function') {
+      colorSchemeQuery.addListener(handleSystemThemeChange);
+    }
   }
 
   // --------------------------------------------------------------------------
@@ -205,7 +234,46 @@
   }
 
   // --------------------------------------------------------------------------
-  // 6. VALIDAÇÃO NATIVA DO FORMULÁRIO DE CONTATO (Acessível & Sem Backend)
+  // 6. TEMA CROMÁTICO REATIVO CONFORME O PROJETO EM DESTAQUE
+  // --------------------------------------------------------------------------
+  const projectCards = Array.from(document.querySelectorAll('[data-project-theme]'));
+  if ('IntersectionObserver' in window && projectCards.length > 0) {
+    const visibleProjectRatios = new Map();
+    const projectThemeObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            visibleProjectRatios.set(entry.target, entry.intersectionRatio);
+          } else {
+            visibleProjectRatios.delete(entry.target);
+          }
+        });
+
+        let mostVisibleProject = null;
+        let highestRatio = 0;
+        visibleProjectRatios.forEach(function (ratio, card) {
+          if (ratio > highestRatio) {
+            highestRatio = ratio;
+            mostVisibleProject = card;
+          }
+        });
+
+        if (mostVisibleProject) {
+          htmlElement.setAttribute('data-project-theme', mostVisibleProject.dataset.projectTheme);
+        } else {
+          htmlElement.removeAttribute('data-project-theme');
+        }
+      },
+      { threshold: [0, 0.15, 0.3, 0.45, 0.6, 0.75] }
+    );
+
+    projectCards.forEach(function (card) {
+      projectThemeObserver.observe(card);
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 7. VALIDAÇÃO NATIVA DO FORMULÁRIO DE CONTATO (Acessível & Sem Backend)
   // --------------------------------------------------------------------------
   const contactForm = document.getElementById('contact-form');
   const nameInput = document.getElementById('contact-name');
@@ -350,7 +418,7 @@
   }
 
   // --------------------------------------------------------------------------
-  // 5. LOG DE INICIALIZAÇÃO CONTROLADO
+  // 8. LOG DE INICIALIZAÇÃO CONTROLADO
   // --------------------------------------------------------------------------
   console.log(
     '%c LF // Lucas Ferreira — Portfólio 2026 %c Pronto ',

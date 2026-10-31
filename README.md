@@ -6,7 +6,7 @@ Portfólio estático feito com HTML5, CSS3 e JavaScript puro para apresentar o p
 
 - `index.html` — estrutura semântica e conteúdo.
 - `style.css` — identidade visual, layouts, responsividade e animações.
-- `script.js` — menu móvel, alternância de tema, navegação ativa, animações de entrada e validação do formulário.
+- `script.js` — menu móvel, alternância de tema, navegação ativa, animações de entrada, tema cromático reativo por projeto e validação do formulário.
 - `AGENTS.md` — regras e restrições para manutenção do projeto.
 - `referencias.md` — referências visuais e decisões de adaptação.
 - `identidade.md` — identidade, conteúdo e sistema visual.
@@ -27,9 +27,26 @@ Não é necessário instalar frameworks nem executar um processo de build.
 - O formulário apenas valida os campos no navegador. Ele **não envia mensagens** porque não existe backend configurado.
 - Endereço de e-mail e URL do GitHub não foram inventados; devem ser adicionados quando os dados reais estiverem disponíveis.
 - Não são geradas imagens dos projetos. Os elementos visuais dos cartões são composições CSS e não representam capturas de tela reais.
-- O projeto ainda precisa de testes manuais em diferentes dispositivos, confirmação de contraste/acessibilidade, capturas reais para o documento visual de referências, criação do repositório GitHub e publicação.
+- A auditoria estática mais recente está documentada em `AUDITORIA_TECNICA.md`. Ainda são necessários testes manuais em diferentes dispositivos, confirmação visual de contraste/acessibilidade, capturas reais para o documento visual de referências, criação do repositório GitHub e publicação.
 - Não marque nenhuma funcionalidade como “testada” até que o teste correspondente tenha sido executado.
 
 ## Tecnologias
 
 HTML5, CSS3, JavaScript ES6+ e APIs nativas do navegador.
+
+## Mídias adicionadas
+
+- `assets/images/lucas-ferreira.jpg`: foto de perfil fornecida pelo autor e usada na seção “Sobre mim”.
+- `assets/images/logo-tecnobound.png`: logo de TecnoBound fornecida pelo autor e usada no primeiro projeto.
+- `assets/images/logo-allin.jpg`: logo de Allin fornecida pelo autor e usada no segundo projeto.
+- `assets/images/logo-merciless.png`: logo de Merciless fornecida pelo autor e usada no terceiro projeto.
+
+## Pendências de conteúdo
+
+- Fazer testes manuais do tema cromático reativo, incluindo contraste, navegação e dispositivos móveis. Merciless permanecerá sem link, conforme solicitado.
+
+## Links de projetos
+
+- TecnoBound: https://projeto-ad-voidbound-lzaq5d22q-40271-5993s-projects.vercel.app/
+- Allin: https://allin-brown-alpha.vercel.app
+- Merciless: sem link, conforme solicitado.

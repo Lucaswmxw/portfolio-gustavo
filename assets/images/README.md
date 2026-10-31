@@ -1,5 +1,6 @@
-# Diretório de Imagens Reais do Autor
+# Imagens do portfólio
 
-Este diretório é reservado exclusivamente para arquivos de mídia reais e originais fornecidos por **Lucas Ferreira** (capturas de tela reais de jogos, diagramas de sistemas ou fotografias do autor).
+- `lucas-ferreira.jpg`: foto de perfil fornecida pelo autor.
+- `logo-tecnobound.png`: logo de TecnoBound fornecida pelo autor.
 
-> **Aviso de Conformidade:** Conforme estipulado em `AGENTS.md`, é estritamente proibido gerar ou armazenar imagens criadas por inteligência artificial para os projetos deste portfólio.
+Aguardando os arquivos oficiais de logo de Allin e Merciless. Não substituir por imagens geradas ou por logos inventadas.
